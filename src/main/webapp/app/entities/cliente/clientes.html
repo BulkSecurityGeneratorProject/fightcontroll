@@ -1,0 +1,96 @@
+<div>
+    <h2 data-translate="flightControllApp.cliente.home.title">Clientes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cliente.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="flightControllApp.cliente.home.createLabel">
+                        Create new Cliente
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nome"><span data-translate="flightControllApp.cliente.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tipoPessoa"><span data-translate="flightControllApp.cliente.tipoPessoa">Tipo Pessoa</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cpfCnpj"><span data-translate="flightControllApp.cliente.cpfCnpj">Cpf Cnpj</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="inscricaoEstadual"><span data-translate="flightControllApp.cliente.inscricaoEstadual">Inscricao Estadual</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="endereco"><span data-translate="flightControllApp.cliente.endereco">Endereco</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="numero"><span data-translate="flightControllApp.cliente.numero">Numero</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="complemento"><span data-translate="flightControllApp.cliente.complemento">Complemento</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bairro"><span data-translate="flightControllApp.cliente.bairro">Bairro</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cep"><span data-translate="flightControllApp.cliente.cep">Cep</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cidade"><span data-translate="flightControllApp.cliente.cidade">Cidade</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contato"><span data-translate="flightControllApp.cliente.contato">Contato</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="telefoneContato"><span data-translate="flightControllApp.cliente.telefoneContato">Telefone Contato</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="emailContato"><span data-translate="flightControllApp.cliente.emailContato">Email Contato</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contato2"><span data-translate="flightControllApp.cliente.contato2">Contato 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="emailContato2"><span data-translate="flightControllApp.cliente.emailContato2">Email Contato 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="telefoneContato2"><span data-translate="flightControllApp.cliente.telefoneContato2">Telefone Contato 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="prefixo"><span data-translate="flightControllApp.cliente.prefixo">Prefixo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="modelo"><span data-translate="flightControllApp.cliente.modelo">Modelo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="numeroDeSerie"><span data-translate="flightControllApp.cliente.numeroDeSerie">Numero De Serie</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cliente in vm.clientes track by cliente.id">
+                    <td><a ui-sref="cliente-detail({id:cliente.id})">{{cliente.id}}</a></td>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.tipoPessoa}}</td>
+                    <td>{{cliente.cpfCnpj}}</td>
+                    <td>{{cliente.inscricaoEstadual}}</td>
+                    <td>{{cliente.endereco}}</td>
+                    <td>{{cliente.numero}}</td>
+                    <td>{{cliente.complemento}}</td>
+                    <td>{{cliente.bairro}}</td>
+                    <td>{{cliente.cep}}</td>
+                    <td>{{cliente.cidade}}</td>
+                    <td>{{cliente.contato}}</td>
+                    <td>{{cliente.telefoneContato}}</td>
+                    <td>{{cliente.emailContato}}</td>
+                    <td>{{cliente.contato2}}</td>
+                    <td>{{cliente.emailContato2}}</td>
+                    <td>{{cliente.telefoneContato2}}</td>
+                    <td>{{cliente.prefixo}}</td>
+                    <td>{{cliente.modelo}}</td>
+                    <td>{{cliente.numeroDeSerie}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cliente-detail({id:cliente.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cliente.edit({id:cliente.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cliente.delete({id:cliente.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

@@ -1,0 +1,95 @@
+
+<div>
+    <h2><span data-translate="flightControllApp.cliente.detail.title">Cliente</span> {{vm.cliente.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="flightControllApp.cliente.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.cliente.nome}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.tipoPessoa">Tipo Pessoa</span></dt>
+        <dd>
+            <span>{{vm.cliente.tipoPessoa}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.cpfCnpj">Cpf Cnpj</span></dt>
+        <dd>
+            <span>{{vm.cliente.cpfCnpj}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.inscricaoEstadual">Inscricao Estadual</span></dt>
+        <dd>
+            <span>{{vm.cliente.inscricaoEstadual}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.endereco">Endereco</span></dt>
+        <dd>
+            <span>{{vm.cliente.endereco}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.numero">Numero</span></dt>
+        <dd>
+            <span>{{vm.cliente.numero}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.complemento">Complemento</span></dt>
+        <dd>
+            <span>{{vm.cliente.complemento}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.bairro">Bairro</span></dt>
+        <dd>
+            <span>{{vm.cliente.bairro}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.cep">Cep</span></dt>
+        <dd>
+            <span>{{vm.cliente.cep}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.cidade">Cidade</span></dt>
+        <dd>
+            <span>{{vm.cliente.cidade}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.contato">Contato</span></dt>
+        <dd>
+            <span>{{vm.cliente.contato}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.telefoneContato">Telefone Contato</span></dt>
+        <dd>
+            <span>{{vm.cliente.telefoneContato}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.emailContato">Email Contato</span></dt>
+        <dd>
+            <span>{{vm.cliente.emailContato}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.contato2">Contato 2</span></dt>
+        <dd>
+            <span>{{vm.cliente.contato2}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.emailContato2">Email Contato 2</span></dt>
+        <dd>
+            <span>{{vm.cliente.emailContato2}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.telefoneContato2">Telefone Contato 2</span></dt>
+        <dd>
+            <span>{{vm.cliente.telefoneContato2}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.prefixo">Prefixo</span></dt>
+        <dd>
+            <span>{{vm.cliente.prefixo}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.modelo">Modelo</span></dt>
+        <dd>
+            <span>{{vm.cliente.modelo}}</span>
+        </dd>
+        <dt><span data-translate="flightControllApp.cliente.numeroDeSerie">Numero De Serie</span></dt>
+        <dd>
+            <span>{{vm.cliente.numeroDeSerie}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="cliente-detail.edit({id:vm.cliente.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

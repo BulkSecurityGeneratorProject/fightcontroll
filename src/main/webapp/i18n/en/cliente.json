@@ -1,0 +1,40 @@
+{
+    "flightControllApp": {
+        "cliente" : {
+            "home": {
+                "title": "Clientes",
+                "createLabel": "Create a new Cliente",
+                "createOrEditLabel": "Create or edit a Cliente",
+                "search": "Search for Cliente"
+            },
+            "created": "A new Cliente is created with identifier {{ param }}",
+            "updated": "A Cliente is updated with identifier {{ param }}",
+            "deleted": "A Cliente is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cliente {{ id }}?"
+            },
+            "detail": {
+                "title": "Cliente"
+            },
+            "nome": "Nome",
+            "tipoPessoa": "Tipo Pessoa",
+            "cpfCnpj": "Cpf Cnpj",
+            "inscricaoEstadual": "Inscricao Estadual",
+            "endereco": "Endereco",
+            "numero": "Numero",
+            "complemento": "Complemento",
+            "bairro": "Bairro",
+            "cep": "Cep",
+            "cidade": "Cidade",
+            "contato": "Contato",
+            "telefoneContato": "Telefone Contato",
+            "emailContato": "Email Contato",
+            "contato2": "Contato 2",
+            "emailContato2": "Email Contato 2",
+            "telefoneContato2": "Telefone Contato 2",
+            "prefixo": "Prefixo",
+            "modelo": "Modelo",
+            "numeroDeSerie": "Numero De Serie"
+        }
+    }
+}

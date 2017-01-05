@@ -1,0 +1,228 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClienteLabel" data-translate="flightControllApp.cliente.home.createOrEditLabel">Create or edit a Cliente</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.cliente.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.cliente.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.cliente.nome"
+                    required />
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.tipoPessoa" for="field_tipoPessoa">Tipo Pessoa</label>
+            <input type="text" class="form-control" name="tipoPessoa" id="field_tipoPessoa"
+                    ng-model="vm.cliente.tipoPessoa"
+                    required ng-maxlength="2" />
+            <div ng-show="editForm.tipoPessoa.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tipoPessoa.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tipoPessoa.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="2">
+                    This field cannot be longer than 2 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.cpfCnpj" for="field_cpfCnpj">Cpf Cnpj</label>
+            <input type="text" class="form-control" name="cpfCnpj" id="field_cpfCnpj"
+                    ng-model="vm.cliente.cpfCnpj"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.inscricaoEstadual" for="field_inscricaoEstadual">Inscricao Estadual</label>
+            <input type="text" class="form-control" name="inscricaoEstadual" id="field_inscricaoEstadual"
+                    ng-model="vm.cliente.inscricaoEstadual"
+                    required />
+            <div ng-show="editForm.inscricaoEstadual.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.inscricaoEstadual.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.endereco" for="field_endereco">Endereco</label>
+            <input type="text" class="form-control" name="endereco" id="field_endereco"
+                    ng-model="vm.cliente.endereco"
+                    required />
+            <div ng-show="editForm.endereco.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.endereco.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.numero" for="field_numero">Numero</label>
+            <input type="text" class="form-control" name="numero" id="field_numero"
+                    ng-model="vm.cliente.numero"
+                    required />
+            <div ng-show="editForm.numero.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.numero.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.complemento" for="field_complemento">Complemento</label>
+            <input type="text" class="form-control" name="complemento" id="field_complemento"
+                    ng-model="vm.cliente.complemento"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.bairro" for="field_bairro">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="field_bairro"
+                    ng-model="vm.cliente.bairro"
+                    required />
+            <div ng-show="editForm.bairro.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.bairro.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.cep" for="field_cep">Cep</label>
+            <input type="text" class="form-control" name="cep" id="field_cep"
+                    ng-model="vm.cliente.cep"
+                    required />
+            <div ng-show="editForm.cep.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cep.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.cidade" for="field_cidade">Cidade</label>
+            <input type="text" class="form-control" name="cidade" id="field_cidade"
+                    ng-model="vm.cliente.cidade"
+                    required />
+            <div ng-show="editForm.cidade.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cidade.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.contato" for="field_contato">Contato</label>
+            <input type="text" class="form-control" name="contato" id="field_contato"
+                    ng-model="vm.cliente.contato"
+                    required />
+            <div ng-show="editForm.contato.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.contato.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.telefoneContato" for="field_telefoneContato">Telefone Contato</label>
+            <input type="text" class="form-control" name="telefoneContato" id="field_telefoneContato"
+                    ng-model="vm.cliente.telefoneContato"
+                    required />
+            <div ng-show="editForm.telefoneContato.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.telefoneContato.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.emailContato" for="field_emailContato">Email Contato</label>
+            <input type="text" class="form-control" name="emailContato" id="field_emailContato"
+                    ng-model="vm.cliente.emailContato"
+                    required />
+            <div ng-show="editForm.emailContato.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.emailContato.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.contato2" for="field_contato2">Contato 2</label>
+            <input type="text" class="form-control" name="contato2" id="field_contato2"
+                    ng-model="vm.cliente.contato2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.emailContato2" for="field_emailContato2">Email Contato 2</label>
+            <input type="text" class="form-control" name="emailContato2" id="field_emailContato2"
+                    ng-model="vm.cliente.emailContato2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.telefoneContato2" for="field_telefoneContato2">Telefone Contato 2</label>
+            <input type="text" class="form-control" name="telefoneContato2" id="field_telefoneContato2"
+                    ng-model="vm.cliente.telefoneContato2"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.prefixo" for="field_prefixo">Prefixo</label>
+            <input type="text" class="form-control" name="prefixo" id="field_prefixo"
+                    ng-model="vm.cliente.prefixo"
+                    required />
+            <div ng-show="editForm.prefixo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prefixo.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.modelo" for="field_modelo">Modelo</label>
+            <input type="text" class="form-control" name="modelo" id="field_modelo"
+                    ng-model="vm.cliente.modelo"
+                    required />
+            <div ng-show="editForm.modelo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.modelo.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="flightControllApp.cliente.numeroDeSerie" for="field_numeroDeSerie">Numero De Serie</label>
+            <input type="text" class="form-control" name="numeroDeSerie" id="field_numeroDeSerie"
+                    ng-model="vm.cliente.numeroDeSerie"
+                    required />
+            <div ng-show="editForm.numeroDeSerie.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.numeroDeSerie.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
